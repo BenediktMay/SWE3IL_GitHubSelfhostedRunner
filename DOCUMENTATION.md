@@ -1,4 +1,4 @@
-# GitHub Self-Hosted Runner & CI/CD Migration Documentation
+﻿# GitHub Self-Hosted Runner & CI/CD Migration Documentation
 
 ## 1. Overview & Objective
 The goal of this assignment is to migrate an existing GitLab CI/CD pipeline (`.gitlab-ci.yml`) to GitHub Actions running on a local self-hosted runner.
@@ -53,7 +53,7 @@ Following the [GitHub migration guide](https://docs.github.com/en/actions/tutori
      ```
 3. **Execution**:
    - Started the listener loop via `.\run.cmd`.
-   - Connected successfully: `√ Connected to GitHub` $\rightarrow$ `Listening for Jobs`.
+   - Connected successfully: `âˆš Connected to GitHub` $\rightarrow$ `Listening for Jobs`.
 
 ### Step 4: Verification & Successful Execution
 - Runner picked up workflow run `#43923955133`.
@@ -81,23 +81,24 @@ Following the [GitHub migration guide](https://docs.github.com/en/actions/tutori
 
 Below are the required screenshots demonstrating the runner setup and pipeline execution.
 
-**Screenshot 1 – GitHub Runner Settings (self‑hosted tab)**
+**Screenshot 1 â€“ GitHub Runner Settings (selfâ€‘hosted tab)**
 [View on GitHub](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/runners?tab=self-hosted)
-![Screenshot 1](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852795262_b6790a4a.png)
+![Screenshot 1](screenshots/media_1794852795262_b6790a4a.png)
 
-**Screenshot 2 – CI workflow file view on GitHub**
+**Screenshot 2 â€“ CI workflow file view on GitHub**
 [View workflow file](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/workflows/ci.yml)
-![Screenshot 2](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852807708_de10a49e.png)
+![Screenshot 2](screenshots/media_1794852807708_de10a49e.png)
 
-**Screenshot 3 – Latest workflow run after formatting fix**
+**Screenshot 3 â€“ Latest workflow run after formatting fix**
 [View run](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/runs/43927723275)
-![Screenshot 3](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852827400_f9f39201.png)
+![Screenshot 3](screenshots/media_1794852827400_f9f39201.png)
 
-**Screenshot 4 – Runner console output showing job execution**
-![Screenshot 4](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794853354888_0b9e7194.png)
+**Screenshot 4 â€“ Runner console output showing job execution**
+![Screenshot 4](screenshots/media_1794853354888_0b9e7194.png)
 
 ---
 
 ## 6. AI Assistance Disclosure
 *Note: This documentation, runner configuration, and CI/CD pipeline setup were created with assistance from AI.*
+
 
