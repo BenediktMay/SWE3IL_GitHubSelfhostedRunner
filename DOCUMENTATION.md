@@ -77,29 +77,24 @@ Following the [GitHub migration guide](https://docs.github.com/en/actions/tutori
 
 ---
 
-## 5. Required Evidence Screenshots
+## 5. Screenshots
 
-Please capture and insert the following screenshots to substantiate that the runner executed on your local machine:
+Below are the required screenshots demonstrating the runner setup and pipeline execution.
 
-1. **Screenshot 1: GitHub Runner Settings (Online Status)**
-   - *Where*: Repository **Settings** > **Actions** > **Runners**
-   - *Shows*: Runner `local-runner` with a green **Idle** badge and label `self-hosted`.
-2. **Screenshot 2: Local Terminal with Runner Logs**
-   - *Where*: Terminal / console log of `C:\actions-runner\run.cmd`
-   - *Shows*: Output log displaying:
-     ```
-     √ Connected to GitHub
-     Listening for Jobs
-     Running job: Type Checking (ty)
-     Running job: Ruff Lint
-     Running job: Pytest
-     ```
-3. **Screenshot 3: Successful GitHub Actions Pipeline Run**
-   - *Where*: GitHub repository **Actions** tab > Run #43923955133 (`ci: add github actions workflow for self-hosted runner`)
-   - *Shows*: Green overall status mark, showing `Type Checking (ty)`, `Ruff Lint`, and `Pytest` passing.
-4. **Screenshot 4: Job Execution Details (Local Host Verification)**
-   - *Where*: Click into **Pytest** job > expand `Set up runner` / `Run Pytest`
-   - *Shows*: Runner machine name matching your local machine and working directory `C:\actions-runner\_work\...`.
+**Screenshot 1 – GitHub Runner Settings (self‑hosted tab)**
+[View on GitHub](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/runners?tab=self-hosted)
+![Screenshot 1](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852795262_b6790a4a.png)
+
+**Screenshot 2 – CI workflow file view on GitHub**
+[View workflow file](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/workflows/ci.yml)
+![Screenshot 2](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852807708_de10a49e.png)
+
+**Screenshot 3 – Latest workflow run after formatting fix**
+[View run](https://github.com/BenediktMay/SWE3IL_GitHubSelfhostedRunner/actions/runs/43927723275)
+![Screenshot 3](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794852827400_f9f39201.png)
+
+**Screenshot 4 – Runner console output showing job execution**
+![Screenshot 4](file:///C:/Users/Benedikt/.gemini/antigravity/brain/f6f60f3b-243f-4cb0-bf7d-de21b3ca1963/.user_uploaded/media_1794853354888_0b9e7194.png)
 
 ---
 
