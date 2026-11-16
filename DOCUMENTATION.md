@@ -100,3 +100,9 @@ Please capture and insert the following screenshots to substantiate that the run
 4. **Screenshot 4: Job Execution Details (Local Host Verification)**
    - *Where*: Click into **Pytest** job > expand `Set up runner` / `Run Pytest`
    - *Shows*: Runner machine name matching your local machine and working directory `C:\actions-runner\_work\...`.
+
+---
+
+## 6. AI Assistance Disclosure
+*Note: This documentation, runner configuration, and CI/CD pipeline setup were created with assistance from AI.*
+
