@@ -1,0 +1,88 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  UV_CACHE_DIR: "${{ github.workspace }}/.uv-cache"
+  UV_COMPILE_BYTECODE: "1"
+  UV_LINK_MODE: "copy"
+
+jobs:
+  lint:
+    name: Ruff Lint
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --locked
+
+      - name: Run Ruff Lint
+        run: uv run ruff check
+
+  lint-format:
+    name: Ruff Format Check
+    runs-on: self-hosted
+    continue-on-error: true
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --locked
+
+      - name: Run Ruff Format Check
+        run: uv run ruff format --check
+
+  typecheck:
+    name: Type Checking (ty)
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --locked
+
+      - name: Run Type Check
+        run: uv run ty check
+
+  test:
+    name: Pytest
+    runs-on: self-hosted
+    needs: [lint, typecheck]
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Sync dependencies
+        run: uv sync --locked
+
+      - name: Run Pytest
+        run: uv run pytest
